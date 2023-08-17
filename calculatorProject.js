@@ -1,4 +1,4 @@
-let result = 0;
+let result = 0, a = 0, b = 0;
 let operator = '';
 
 function add(firstNum, b) {
@@ -33,7 +33,7 @@ function divide(a, b) {
 function operatorChooser(operator, a, b) // execute  when press '=' key on the calculator;
 // or when press another operator , 
 
-{   a = result; // assign result to a again  
+{    // assign result to a again  
      
     switch(operator) {
         case '+'  :   
@@ -52,17 +52,14 @@ function operatorChooser(operator, a, b) // execute  when press '=' key on the c
             divide(a,b);
         break;
         default: return  result = null;
-        
     }
-     
-    
-} 
-
-operator = '+';
-a = 3;
-b = 33;
-
-operatorChooser(operator,a ,b);
-console('result');
+    return result;
+}
 
 
+operatorChooser('-', 5, -5);
+console.log(a);
+console.log(result);
+a = operatorChooser('-', 5, -5);
+console.log(a == result);
+// so far so good move on to create the website:.... yyeahhh
