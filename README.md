@@ -15,13 +15,63 @@
 
 
 
-
-
-
-
-
 Step 2:
 Create the functions that populate the display when you click the number buttons. You should be storing the ‘display value’ in a variable somewhere for use in the next step.
+
+
+
+
+logical steps: 
+
+
+calculatorContainer.addEventListener('click', (e) => {
+    const clickedButton = e.target;
+    const buttonText = clickedButton.textContent;
+    while ( currentText.length < 9) {
+
+
+     if (clickedButton.classList.contains('num')) {
+      while (!a) { 
+    if ( clickedButton.classList.contains('.')) {
+         currentText += buttonText;   
+         clickedButton.classList.remove('num')
+         
+         }
+          currentText += buttonText;
+          displayArea.textContent = currentText;
+          a = displayArea.textContent;
+      }
+
+
+    } else if (clickedButton.classList.contains('operator')) {
+        displayArea.textContent =currentText;
+        operator = currentText;
+        
+    }
+     
+        
+    }
+
+})
+
+
+
+
+clickA = if( clickedButton.classList.contains('num') && currentText.length < 9)
+
+
+
+
+
+ step 2.2: allow user to click operator buttons.
+ ** display the current operator( user can click multiple operator but only  apply the last operator)
+ ** store the last operator as a operator to work with numbers
+ 
+ step 2.3: allow user to click num and '.' buttons again
+ ** Display num and '.' within 9 digits
+ ** '.' appear only once time.
+ ** Store currentText as 'b' variable ( if string)
+ 
 
 
 

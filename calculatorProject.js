@@ -3,17 +3,47 @@ const displayArea = document.getElementById('display')
 let currentText = '';
 
 calculatorContainer.addEventListener('click', (e) => {
-   const clickedButton = e.target 
-   // Run display function and store number, operators in a, b, operator
-   const buttonText = clickedButton.textContent;
-   if (clickedButton.classList.contains('num')) {
-        currentText += buttonText;
-        displayArea.textContent = currentText;
-   }
-});
+    const clickedButton = e.target; 
+    const buttonText = clickedButton.textContent;
+    const currentText ='';
+    if (clickA || a.length < 9) {
+     a = clickA;
+     display(currentText);
 
-function display(input) {
-    
+     if (clickedOperator || a.length == 9) { 
+        operator = currentText;
+        return a;
+    };
+
+   };
+    operator = clickOperator;
+     while(operator) {
+      b = clickB;
+      
+
+      if(clickOperator|| b.length<9) {
+        calculation();
+        operator = '';
+        b = 0;
+        a = result;
+        return display(result); 
+      }
+     
+    }
+
+});
+   
+
+
+
+
+  function displayOperator(e) {
+
+
+  }
+
+  function displayNum(e) {
+         
 }
 
 let result = 0, a = 0, b = 0;
@@ -35,8 +65,8 @@ function divide(a, b) {
     return result = a / b;
 }
 
-function operatorChooser(operator, a, b) {
-    // Assign result to a again
+function displayValue(operator, a, b) {
+    
     switch (operator) {
         case '+':
             add(a, b);
